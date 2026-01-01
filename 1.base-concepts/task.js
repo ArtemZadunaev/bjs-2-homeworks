@@ -12,13 +12,12 @@ function solveEquation(a, b, c) {
     arr.push((-b + Math.sqrt(discriminant)) / (2 * a));
     arr.push((-b - Math.sqrt(discriminant)) / (2 * a));
   }
-  return console.log(arr);
+  return arr;
 
 }
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   const monthPercent = percent / 100 / 12;
   const creditBody = amount - contribution;
   const monthPayment = creditBody * (monthPercent + (monthPercent / (Math.pow(1 + monthPercent, countMonths) - 1)));
-  return console.log(+(monthPayment * countMonths).toFixed(2));
-
+  return +(monthPayment * countMonths).toFixed(2);
 }
